@@ -6,22 +6,20 @@ from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFo
 from PySide2.QtWidgets import *
 from app import *
 
-# add ayman as an easter egg
-
 class MainWindow(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
-        
-        # FUNCTIONS
-        self.ui.button_close.clicked.connect(lambda: self.close())
-        
-        
+
         # Makes the window rounded and keeps it on top
         self.setWindowFlag(Qt.FramelessWindowHint)
         self.setWindowFlag(Qt.WindowStaysOnTopHint)
-        self.setAttribute(Qt.WA_TranslucentBackground)
+        self.setAttribute(Qt.WA_TranslucentBackground)        
+
+        # FUNCTIONS
+        self.ui.button_close.clicked.connect(lambda: self.close())
+        self.ui.button_minimize.clicked.connect(lambda: self.showMinimized())
         
         self.show()
         
