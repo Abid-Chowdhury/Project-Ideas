@@ -15,6 +15,7 @@ from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
     QRadialGradient)
 from PySide2.QtWidgets import *
 
+GLOBAL_STATE = 0
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -123,6 +124,7 @@ class Ui_MainWindow(object):
         font2.setUnderline(False)
         font2.setWeight(50)
         font2.setKerning(False)
+        font2.setLetterSpacing(QFont.AbsoluteSpacing, -5)
         self.button_calender.setFont(font2)
         self.button_calender.setContextMenuPolicy(Qt.DefaultContextMenu)
         self.button_calender.setLayoutDirection(Qt.LeftToRight)
@@ -172,15 +174,30 @@ class Ui_MainWindow(object):
         self.button_portfolio_website = QPushButton(self.dropShadowFrame)
         self.button_portfolio_website.setObjectName(u"button_portfolio_website")
         self.button_portfolio_website.setGeometry(QRect(15, 315, 169, 160))
-        self.button_portfolio_website.setFont(font1)
         self.button_portfolio_website.setLayoutDirection(Qt.LeftToRight)
         self.button_portfolio_website.setAutoFillBackground(False)
+        sizePolicy = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.button_calender.sizePolicy().hasHeightForWidth())
+        self.button_portfolio_website.setSizePolicy(sizePolicy)
+        font3 = QFont()
+        font3.setFamily(u"Adam Medium")
+        font3.setPointSize(40)
+        font3.setBold(False)
+        font3.setItalic(False)
+        font3.setUnderline(False)
+        font3.setWeight(50)
+        font3.setKerning(False)
+        font3.setLetterSpacing(QFont.AbsoluteSpacing, -3)
+        self.button_portfolio_website.setFont(font3)
         self.button_portfolio_website.setStyleSheet(u"QPushButton{\n"
 "	background-color: rgb(222, 222, 222);\n"
 "	border-radius: 15px;\n"
 "}")
         self.button_portfolio_website.setCheckable(False)
         self.button_portfolio_website.setFlat(False)
+        
         
         # Netflix Clone
         self.button_netflix_clone = QPushButton(self.dropShadowFrame)
@@ -251,7 +268,22 @@ class Ui_MainWindow(object):
         self.button_form_validator = QPushButton(self.dropShadowFrame)
         self.button_form_validator.setObjectName(u"button_form_validator")
         self.button_form_validator.setGeometry(QRect(195, 485, 169, 160))
-        self.button_form_validator.setFont(font1)
+        
+        sizePolicy = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.button_calender.sizePolicy().hasHeightForWidth())
+        self.button_form_validator.setSizePolicy(sizePolicy)
+        font5 = QFont()
+        font5.setFamily(u"Adam Medium")
+        font5.setPointSize(40)
+        font5.setBold(False)
+        font5.setItalic(False)
+        font5.setUnderline(False)
+        font5.setWeight(50)
+        font5.setKerning(False)
+        font5.setLetterSpacing(QFont.AbsoluteSpacing, -5)
+        self.button_form_validator.setFont(font5)          
         self.button_form_validator.setLayoutDirection(Qt.LeftToRight)
         self.button_form_validator.setAutoFillBackground(False)
         self.button_form_validator.setStyleSheet(u"QPushButton{\n"
@@ -299,7 +331,21 @@ class Ui_MainWindow(object):
         self.button_tic_tac_toe = QPushButton(self.dropShadowFrame)
         self.button_tic_tac_toe.setObjectName(u"button_tic_tac_toe")
         self.button_tic_tac_toe.setGeometry(QRect(15, 485, 169, 160))
-        self.button_tic_tac_toe.setFont(font1)
+        sizePolicy = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.button_calender.sizePolicy().hasHeightForWidth())
+        self.button_tic_tac_toe.setSizePolicy(sizePolicy)        
+        font4 = QFont()
+        font4.setFamily(u"Adam Medium")
+        font4.setPointSize(40)
+        font4.setBold(False)
+        font4.setItalic(False)
+        font4.setUnderline(False)
+        font4.setWeight(50)
+        font4.setKerning(False)
+        font4.setLetterSpacing(QFont.AbsoluteSpacing, -2)         
+        self.button_tic_tac_toe.setFont(font4)
         self.button_tic_tac_toe.setLayoutDirection(Qt.LeftToRight)
         self.button_tic_tac_toe.setAutoFillBackground(False)
         self.button_tic_tac_toe.setStyleSheet(u"QPushButton{\n"
@@ -333,9 +379,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         QMetaObject.connectSlotsByName(MainWindow)
-    # setupUi
-
-
+        
     # retranslateUi
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
@@ -372,3 +416,5 @@ class Ui_MainWindow(object):
 "Bot", None))
     
 
+    def returnStatus():
+        return GLOBAL_STATE

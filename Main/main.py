@@ -17,11 +17,28 @@ class MainWindow(QMainWindow):
         self.setWindowFlag(Qt.WindowStaysOnTopHint)
         self.setAttribute(Qt.WA_TranslucentBackground)        
 
+        # Move Window
+        def moveWindow(event):
+            # RESTORE BEFORE MOVE
+            if Ui_MainWindow.returnStatus() == 1:
+                Ui_MainWindow.maximize_restore(self)
+
+            # IF LEFT CLICK MOVE WINDOW
+            if event.buttons() == Qt.LeftButton:
+                self.move(self.pos() + event.globalPos() - self.dragPos)
+                self.dragPos = event.globalPos()
+                event.accept()
+
+        self.ui.label_title.mouseMoveEvent = moveWindow
+        
         # FUNCTIONS
         self.ui.button_close.clicked.connect(lambda: self.close())
         self.ui.button_minimize.clicked.connect(lambda: self.showMinimized())
         
         self.show()
+        
+    def mousePressEvent(self, event):
+        self.dragPos = event.globalPos()
         
 if __name__ == "__main__":
     app = QApplication(sys.argv)
