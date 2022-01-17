@@ -32,8 +32,24 @@ class MainWindow(QMainWindow):
         self.ui.label_title.mouseMoveEvent = moveWindow
         
         # FUNCTIONS
+        
+        # close/minimize button
         self.ui.button_close.clicked.connect(lambda: self.close())
         self.ui.button_minimize.clicked.connect(lambda: self.showMinimized())
+        
+        # buttons
+        def change_color(button):
+            if self.ui.button_to_do_list.palette().button().color().name() == '#dedede':
+                print('yellow')
+                self.ui.button_to_do_list.setStyleSheet("background-color: #FFFF64;\n"
+                                                    "border-radius: 15px;\n")
+            elif self.ui.button_to_do_list.palette().button().color().name() == '#FFFF64':
+                print('green')
+                self.ui.button_to_do_list.setStyleSheet("background-color: #64FF64;\n"
+                                                    "border-radius: 15px;\n")
+  
+        self.ui.button_to_do_list.clicked.connect(lambda: change_color(self.ui.button_to_do_list))
+        
         
         self.show()
         
