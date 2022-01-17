@@ -38,20 +38,21 @@ class MainWindow(QMainWindow):
         self.ui.button_minimize.clicked.connect(lambda: self.showMinimized())
         
         # buttons
-        def change_color(self, button):
-            if self.ui.button_to_do_list.palette().button().color().name() == '#dedede':
-                self.ui.button_to_do_list.setStyleSheet("background-color: #ffff64;\n"
+        def change_color(button):
+            if button.palette().button().color().name() == '#dedede':
+                button.setStyleSheet("background-color: #ffff64;\n"
                                                     "border-radius: 15px;\n")
                 
-            elif self.ui.button_to_do_list.palette().button().color().name() == '#ffff64':
-                self.ui.button_to_do_list.setStyleSheet("background-color: #64ff64;\n"
+            elif button.palette().button().color().name() == '#ffff64':
+                button.setStyleSheet("background-color: #64ff64;\n"
                                                     "border-radius: 15px;\n")
 
             else:
-                self.ui.button_to_do_list.setStyleSheet("background-color: #dedede;"
+                button.setStyleSheet("background-color: #dedede;"
                                                         "border-radius: 15px;")
 
-        self.ui.button_to_do_list.clicked.connect(lambda: change_color(self, self.ui.button_to_do_list))
+        self.ui.button_to_do_list.clicked.connect(lambda: change_color(self.ui.button_to_do_list))
+        self.ui.button_notes.clicked.connect(lambda: change_color(self.ui.button_notes))
         
         
         self.show()
