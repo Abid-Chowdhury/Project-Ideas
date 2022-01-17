@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>945</width>
-    <height>689</height>
+    <width>940</width>
+    <height>680</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -50,7 +50,7 @@
          <x>-4</x>
          <y>2</y>
          <width>931</width>
-         <height>150</height>
+         <height>141</height>
         </rect>
        </property>
        <property name="font">
@@ -78,7 +78,7 @@
       <widget class="QPushButton" name="button_close">
        <property name="geometry">
         <rect>
-         <x>893</x>
+         <x>885</x>
          <y>15</y>
          <width>20</width>
          <height>20</height>
@@ -97,7 +97,7 @@
       <widget class="QPushButton" name="button_minimize">
        <property name="geometry">
         <rect>
-         <x>858</x>
+         <x>850</x>
          <y>15</y>
          <width>20</width>
          <height>20</height>
@@ -116,7 +116,7 @@
       <widget class="QPushButton" name="button_to_do_list">
        <property name="geometry">
         <rect>
-         <x>10</x>
+         <x>15</x>
          <y>140</y>
          <width>169</width>
          <height>160</height>
@@ -124,7 +124,7 @@
        </property>
        <property name="font">
         <font>
-         <family>Adam Bold</family>
+         <family>Adam Medium</family>
          <pointsize>40</pointsize>
          <weight>50</weight>
          <bold>false</bold>
@@ -142,7 +142,6 @@
         <string notr="true">QPushButton{
 	background-color: rgb(222, 222, 222);
 	border-radius: 15px;
-	border: 1px solid;
 }</string>
        </property>
        <property name="text">
@@ -159,7 +158,7 @@ List</string>
       <widget class="QPushButton" name="button_notes">
        <property name="geometry">
         <rect>
-         <x>190</x>
+         <x>195</x>
          <y>140</y>
          <width>169</width>
          <height>160</height>
@@ -167,7 +166,7 @@ List</string>
        </property>
        <property name="font">
         <font>
-         <family>Adam Bold</family>
+         <family>Adam Medium</family>
          <pointsize>40</pointsize>
          <weight>50</weight>
          <bold>false</bold>
@@ -185,11 +184,645 @@ List</string>
         <string notr="true">QPushButton{
 	background-color: rgb(222, 222, 222);
 	border-radius: 15px;
-	border: 1px solid;
 }</string>
        </property>
        <property name="text">
         <string>Notes</string>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="button_calender">
+       <property name="geometry">
+        <rect>
+         <x>375</x>
+         <y>140</y>
+         <width>169</width>
+         <height>160</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Adam Medium</family>
+         <pointsize>40</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+         <underline>false</underline>
+         <kerning>false</kerning>
+        </font>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::DefaultContextMenu</enum>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(222, 222, 222);
+	border-radius: 15px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Calender</string>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="button_chat_system">
+       <property name="geometry">
+        <rect>
+         <x>555</x>
+         <y>140</y>
+         <width>169</width>
+         <height>160</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Adam Medium</family>
+         <pointsize>40</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+         <underline>false</underline>
+         <kerning>false</kerning>
+        </font>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::DefaultContextMenu</enum>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(222, 222, 222);
+	border-radius: 15px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Chat
+System</string>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="button_weather">
+       <property name="geometry">
+        <rect>
+         <x>735</x>
+         <y>140</y>
+         <width>169</width>
+         <height>160</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Adam Medium</family>
+         <pointsize>40</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+         <underline>false</underline>
+         <kerning>false</kerning>
+        </font>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::DefaultContextMenu</enum>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(222, 222, 222);
+	border-radius: 15px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Weather</string>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="button_portfolio_website">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>315</y>
+         <width>169</width>
+         <height>160</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Adam Medium</family>
+         <pointsize>40</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+         <underline>false</underline>
+         <kerning>false</kerning>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(222, 222, 222);
+	border-radius: 15px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Portfolio
+Website</string>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="button_netflix_clone">
+       <property name="geometry">
+        <rect>
+         <x>195</x>
+         <y>315</y>
+         <width>169</width>
+         <height>160</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Adam Medium</family>
+         <pointsize>40</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+         <underline>false</underline>
+         <kerning>false</kerning>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(222, 222, 222);
+	border-radius: 15px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Netflix
+Clone</string>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="button_chess_game">
+       <property name="geometry">
+        <rect>
+         <x>375</x>
+         <y>315</y>
+         <width>169</width>
+         <height>160</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Adam Medium</family>
+         <pointsize>40</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+         <underline>false</underline>
+         <kerning>false</kerning>
+        </font>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::DefaultContextMenu</enum>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(222, 222, 222);
+	border-radius: 15px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Chess
+Game</string>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="button_donation_website">
+       <property name="geometry">
+        <rect>
+         <x>555</x>
+         <y>315</y>
+         <width>169</width>
+         <height>160</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Adam Medium</family>
+         <pointsize>40</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+         <underline>false</underline>
+         <kerning>false</kerning>
+        </font>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::DefaultContextMenu</enum>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(222, 222, 222);
+	border-radius: 15px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Donation
+Website</string>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="button_budget_tracker">
+       <property name="geometry">
+        <rect>
+         <x>735</x>
+         <y>315</y>
+         <width>169</width>
+         <height>160</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Adam Medium</family>
+         <pointsize>40</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+         <underline>false</underline>
+         <kerning>false</kerning>
+        </font>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::DefaultContextMenu</enum>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(222, 222, 222);
+	border-radius: 15px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Budget
+Tracker</string>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="button_form_validator">
+       <property name="geometry">
+        <rect>
+         <x>195</x>
+         <y>485</y>
+         <width>169</width>
+         <height>160</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Adam Medium</family>
+         <pointsize>40</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+         <underline>false</underline>
+         <kerning>false</kerning>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(222, 222, 222);
+	border-radius: 15px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Form
+Validator</string>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="button_stock_trading_bot">
+       <property name="geometry">
+        <rect>
+         <x>555</x>
+         <y>485</y>
+         <width>169</width>
+         <height>160</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Adam Medium</family>
+         <pointsize>40</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+         <underline>false</underline>
+         <kerning>false</kerning>
+        </font>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::DefaultContextMenu</enum>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(222, 222, 222);
+	border-radius: 15px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Stock
+Trading
+Bot</string>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="button_web_scraper">
+       <property name="geometry">
+        <rect>
+         <x>375</x>
+         <y>485</y>
+         <width>169</width>
+         <height>160</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Adam Medium</family>
+         <pointsize>40</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+         <underline>false</underline>
+         <kerning>false</kerning>
+        </font>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::DefaultContextMenu</enum>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(222, 222, 222);
+	border-radius: 15px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Web
+Scraper</string>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="button_tic_tac_toe">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>485</y>
+         <width>169</width>
+         <height>160</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Adam Medium</family>
+         <pointsize>40</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+         <underline>false</underline>
+         <kerning>false</kerning>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(222, 222, 222);
+	border-radius: 15px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Tic Tac
+Toe</string>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="button_discord_bot">
+       <property name="geometry">
+        <rect>
+         <x>735</x>
+         <y>485</y>
+         <width>169</width>
+         <height>160</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Adam Medium</family>
+         <pointsize>40</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+         <underline>false</underline>
+         <kerning>false</kerning>
+        </font>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::DefaultContextMenu</enum>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(222, 222, 222);
+	border-radius: 15px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Discord
+Bot</string>
        </property>
        <property name="checkable">
         <bool>false</bool>
