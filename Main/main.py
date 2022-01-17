@@ -32,7 +32,6 @@ class MainWindow(QMainWindow):
         self.ui.label_title.mouseMoveEvent = moveWindow
         
         # FUNCTIONS
-        
         # close/minimize button
         self.ui.button_close.clicked.connect(lambda: self.close())
         self.ui.button_minimize.clicked.connect(lambda: self.showMinimized())
@@ -53,8 +52,21 @@ class MainWindow(QMainWindow):
 
         self.ui.button_to_do_list.clicked.connect(lambda: change_color(self.ui.button_to_do_list))
         self.ui.button_notes.clicked.connect(lambda: change_color(self.ui.button_notes))
-        
-        
+        self.ui.button_calender.clicked.connect(lambda: change_color(self.ui.button_calender))
+        self.ui.button_chat_system.clicked.connect(lambda: change_color(self.ui.button_chat_system))
+        self.ui.button_weather.clicked.connect(lambda: change_color(self.ui.button_weather))
+        self.ui.button_portfolio_website.clicked.connect(lambda: change_color(self.ui.button_portfolio_website))
+        self.ui.button_netflix_clone.clicked.connect(lambda: change_color(self.ui.button_netflix_clone))   
+        self.ui.button_chess_game.clicked.connect(lambda: change_color(self.ui.button_chess_game))
+        self.ui.button_donation_website.clicked.connect(lambda: change_color(self.ui.button_donation_website))
+        self.ui.button_budget_tracker.clicked.connect(lambda: change_color(self.ui.button_budget_tracker))
+        self.ui.button_tic_tac_toe.clicked.connect(lambda: change_color(self.ui.button_tic_tac_toe))
+        self.ui.button_form_validator.clicked.connect(lambda: change_color(self.ui.button_form_validator))
+        self.ui.button_web_scraper.clicked.connect(lambda: change_color(self.ui.button_web_scraper))
+        self.ui.button_stock_trading_bot.clicked.connect(lambda: change_color(self.ui.button_stock_trading_bot))
+        self.ui.button_discord_bot.clicked.connect(lambda: change_color(self.ui.button_discord_bot))        
+                
+                
         self.show()
         
     def mousePressEvent(self, event):
