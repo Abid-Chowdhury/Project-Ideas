@@ -36,6 +36,11 @@ class MainWindow(QMainWindow):
         self.ui.button_close.clicked.connect(lambda: self.close())
         self.ui.button_minimize.clicked.connect(lambda: self.showMinimized())
         
+        # load button colors
+        def load_colors():
+            pass
+        
+        
         # buttons
         def change_color(button):
             if button.palette().button().color().name() == '#dedede':
