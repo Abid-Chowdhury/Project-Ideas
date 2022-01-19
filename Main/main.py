@@ -30,14 +30,17 @@ class MainWindow(QMainWindow):
                 event.accept()
 
         self.ui.label_title.mouseMoveEvent = moveWindow
-        
-        # FUNCTIONS
+
         # close/minimize button
         self.ui.button_close.clicked.connect(lambda: self.close())
         self.ui.button_minimize.clicked.connect(lambda: self.showMinimized())
         
-        # load button colors
-        def load_colors():
+        # Update colors.txt
+        def update_Colors_Txt():
+            pass
+        
+        # load colors.txt
+        def load_Colors_Txt():
             buttons = [self.ui.button_to_do_list, 
                        self.ui.button_notes, 
                        self.ui.button_calender,
@@ -99,7 +102,7 @@ class MainWindow(QMainWindow):
         self.ui.button_stock_trading_bot.clicked.connect(lambda: change_color(self.ui.button_stock_trading_bot))
         self.ui.button_discord_bot.clicked.connect(lambda: change_color(self.ui.button_discord_bot))        
                 
-        load_colors()
+        load_Colors_Txt()
         self.show()
         
     def mousePressEvent(self, event):
