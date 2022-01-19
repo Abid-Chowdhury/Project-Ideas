@@ -6,10 +6,16 @@ def change_color():
     f = open(r'button_state.txt', 'r')
     for line in f.readlines():
         if 'button_notes' in line:
-            pass
+            if 'YELLOW' in line:
+                b.config(bg='yellow')
+            elif 'GREEN' in line:
+                b.config(bg='green')
+            elif 'GRAY' in line:
+                b.config(bg='gray')
 b = Button(text='Click me', command=lambda: change_color())
 b.pack()
 
+change_color()
 
 window.mainloop()
 

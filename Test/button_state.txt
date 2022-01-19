@@ -1,5 +1,5 @@
 button_to_do_list 
-button_notes 
+button_notes GRAY
 button_calender
 button_chat_system
 button_weather
