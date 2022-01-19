@@ -38,8 +38,10 @@ class MainWindow(QMainWindow):
         
         # load button colors
         def load_colors():
-            pass
-        
+            # FOR EACH BUTTON
+                # get colors from color.txt
+                # change color of button
+            pass   
         
         # buttons
         def change_color(button):

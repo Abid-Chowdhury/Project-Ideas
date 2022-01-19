@@ -1,0 +1,15 @@
+button_to_do_list GRAY
+button_notes GRAY
+button_calender GRAY
+button_chat_system GRAY
+button_weather GRAY
+button_portfolio_website GRAY
+button_netflix_clone GRAY
+button_chess_game GRAY
+button_donation_website GRAY
+button_budget_tracker GRAY
+button_tic_tac_toe GRAY
+button_form_validator GRAY
+button_web_scraper GRAY
+button_stock_trading_bot GRAY
+button_discord_bot GRAY
