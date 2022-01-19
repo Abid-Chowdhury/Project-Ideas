@@ -38,10 +38,36 @@ class MainWindow(QMainWindow):
         
         # load button colors
         def load_colors():
-            # FOR EACH BUTTON
-                # get colors from color.txt
-                # change color of button
-            pass   
+            buttons = [self.ui.button_to_do_list, 
+                       self.ui.button_notes, 
+                       self.ui.button_calender,
+                       self.ui.button_chat_system,
+                       self.ui.button_weather,
+                       self.ui.button_portfolio_website,
+                       self.ui.button_netflix_clone,
+                       self.ui.button_chess_game,
+                       self.ui.button_donation_website,
+                       self.ui.button_budget_tracker,
+                       self.ui.button_tic_tac_toe,
+                       self.ui.button_form_validator,
+                       self.ui.button_web_scraper,
+                       self.ui.button_stock_trading_bot,
+                       self.ui.button_discord_bot]
+                        
+            colors = open(r'colors.txt', 'r')
+            
+            for line in colors.readlines():
+                for button in buttons:
+                    if button.objectName() in line:
+                        if 'GRAY' in line:
+                            button.setStyleSheet("background-color: #dedede;\n"
+                                                 "border-radius: 15px;\n")
+                        elif 'YELLOW' in line:
+                            button.setStyleSheet("background-color: #ffff64;\n"
+                                                 "border-radius: 15px;\n")
+                        elif 'GREEN' in line:
+                            button.setStyleSheet("background-color: #64ff64;\n"
+                                                 "border-radius: 15px;\n")
         
         # buttons
         def change_color(button):
@@ -73,7 +99,7 @@ class MainWindow(QMainWindow):
         self.ui.button_stock_trading_bot.clicked.connect(lambda: change_color(self.ui.button_stock_trading_bot))
         self.ui.button_discord_bot.clicked.connect(lambda: change_color(self.ui.button_discord_bot))        
                 
-                
+        load_colors()
         self.show()
         
     def mousePressEvent(self, event):
