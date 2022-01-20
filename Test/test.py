@@ -1,23 +1,25 @@
 # CHANGE A SPECIFIC LINE IN A FILE
 
+
+
 with open('button_state.txt', 'r') as f:
     # put all the lines in a list
     list_of_lines = f.readlines()
     
     # change a specific line
-    for i in range(0,2):
+    for i in range(0,len(list_of_lines)):
         
         # find the line to change
-        if 'button_notes' in list_of_lines[i]:
+        if 'button_portfolio_website' in list_of_lines[i]:
             
             # locate the color
             color = list_of_lines[i].split(' ')
             
             # change the color
-            color[1] = '#64ff64'
+            color[1] = '#64ff64\n'
             
             # remove the current color
-            list_of_lines[i] = list_of_lines[i][:-7]
+            list_of_lines[i] = list_of_lines[i][:-8]
             
             # add the new color
             list_of_lines[i] = f'{list_of_lines[i]}{color[1]}'

@@ -90,13 +90,13 @@ class MainWindow(QMainWindow):
             for line in colors.readlines():
                 for button in buttons:
                     if button.objectName() in line:
-                        if 'GRAY' in line:
+                        if '#dedede' in line:
                             button.setStyleSheet("background-color: #dedede;\n"
                                                  "border-radius: 15px;\n")
-                        elif 'YELLOW' in line:
+                        elif '#ffff64' in line:
                             button.setStyleSheet("background-color: #ffff64;\n"
                                                  "border-radius: 15px;\n")
-                        elif 'GREEN' in line:
+                        elif '#64ff64' in line:
                             button.setStyleSheet("background-color: #64ff64;\n"
                                                  "border-radius: 15px;\n")
         
