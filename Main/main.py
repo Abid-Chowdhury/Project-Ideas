@@ -57,10 +57,30 @@ class MainWindow(QMainWindow):
             # gets bg color of button
             # self.ui.button_to_do_list.palette().window().color().name()
             
-            for button in buttons:
-                print(button.palette().window().color().name())
+            with open('colors.txt', 'r') as f:
+                # put all the lines in a list
+                list_of_lines = f.readlines()
+                
+                # read through all the lines
+                for i in range(0,len(list_of_lines)):
+                    
+                    # find the line to change
+                    if 'button_donation_website' in list_of_lines[i]:
+                        # locate the color
+                        color = list_of_lines[i].split(' ')
+                        
+                        # change the color 
+                        color[1] = f'{self.ui.button_donation_website.palette().window().color().name()}\n'
+                        
+                        # remove the current color
+                        list_of_lines[i] = list_of_lines[i][:-8]
+                        
+                        # add the new color
+                        list_of_lines[i] = f'{list_of_lines[i]}{color[1]}'
             
-            pass
+            # write the new colors to the file
+            with open('colors.txt', 'w') as f:
+                f.writelines(list_of_lines)
             
             # FOR EACH BUTTON
                 # get color of button
@@ -129,7 +149,7 @@ class MainWindow(QMainWindow):
         self.ui.button_web_scraper.clicked.connect(lambda: change_color(self.ui.button_web_scraper))
         self.ui.button_stock_trading_bot.clicked.connect(lambda: change_color(self.ui.button_stock_trading_bot))
         self.ui.button_discord_bot.clicked.connect(lambda: change_color(self.ui.button_discord_bot))        
-                
+
         load_Colors_Txt()
         self.show()
         

@@ -1,12 +1,10 @@
 # CHANGE A SPECIFIC LINE IN A FILE
 
-
-
 with open('button_state.txt', 'r') as f:
     # put all the lines in a list
     list_of_lines = f.readlines()
     
-    # change a specific line
+    # read through all the lines
     for i in range(0,len(list_of_lines)):
         
         # find the line to change
