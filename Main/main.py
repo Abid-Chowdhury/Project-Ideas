@@ -33,11 +33,39 @@ class MainWindow(QMainWindow):
 
         # close/minimize button
         self.ui.button_close.clicked.connect(lambda: self.close())
+        self.ui.button_close.clicked.connect(lambda: update_Colors_Txt())
         self.ui.button_minimize.clicked.connect(lambda: self.showMinimized())
         
-        # Update colors.txt
+        # Update Colors.txt
         def update_Colors_Txt():
+            buttons = [self.ui.button_to_do_list, 
+                       self.ui.button_notes, 
+                       self.ui.button_calender,
+                       self.ui.button_chat_system,
+                       self.ui.button_weather,
+                       self.ui.button_portfolio_website,
+                       self.ui.button_netflix_clone,
+                       self.ui.button_chess_game,
+                       self.ui.button_donation_website,
+                       self.ui.button_budget_tracker,
+                       self.ui.button_tic_tac_toe,
+                       self.ui.button_form_validator,
+                       self.ui.button_web_scraper,
+                       self.ui.button_stock_trading_bot,
+                       self.ui.button_discord_bot]
+
+            # gets bg color of button
+            # self.ui.button_to_do_list.palette().window().color().name()
+            
+            for button in buttons:
+                print(button.palette().window().color().name())
+            
             pass
+            
+            # FOR EACH BUTTON
+                # get color of button
+                # set colors.txt to that color
+            
         
         # load colors.txt
         def load_Colors_Txt():

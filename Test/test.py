@@ -1,40 +1,27 @@
-from tkinter import *
+# open the file 
+# with open('button_state.txt', 'r') as f:
+    
+    # locate the current color 
+    # color = f.read().split(' ')
+    
+    # change the color
+    # color[1] = '#64ff64'
 
-window = Tk()
+# write the new color to the file
+# with open('button_state.txt', 'w') as f:
+    # f.write(' '.join(color))
+  
+def test1():
+    with open('button_state.txt', 'r') as f:
+        for line in f.readlines():
+            if 'button_notes' in line:
+                print(line)
+                current_Color = line.split(' ')[1]
+                new_Color = '#64ff64'
 
-def change_color():
-    f = open(r'button_state.txt', 'r')
-    for line in f.readlines():
-        if 'button_notes' in line:
-            if 'YELLOW' in line:
-                b.config(bg='yellow')
-            elif 'GREEN' in line:
-                b.config(bg='green')
-            elif 'GRAY' in line:
-                b.config(bg='gray')
-b = Button(text='Click me', command=lambda: change_color())
-b.pack()
+    with open('button_state.txt', 'w') as f:
+        f.write()
 
-change_color()
-
-window.mainloop()
-
-"""
-# Change state
-if (button) in line:
-    if (WHITE) in line:
-        button = YELLOW
-        button.config(bg=YELLOW)
-    elif (YELLOW) in line:
-        button = GREEN
-        button.config(bg=GREEN)
-    elif (GREEN) in line:
-        button = WHITE
-        button.config(bg=WHITE)
-        
-# save state
-
-
-"""
-
-
+text = '#64ff64'
+text = text[:-7]
+print(text)
