@@ -1,27 +1,29 @@
-# open the file 
-# with open('button_state.txt', 'r') as f:
+# CHANGE A SPECIFIC LINE IN A FILE
+
+with open('button_state.txt', 'r') as f:
+    # put all the lines in a list
+    list_of_lines = f.readlines()
     
-    # locate the current color 
-    # color = f.read().split(' ')
-    
-    # change the color
-    # color[1] = '#64ff64'
+    # change a specific line
+    for i in range(0,2):
+        
+        # find the line to change
+        if 'button_notes' in list_of_lines[i]:
+            
+            # locate the color
+            color = list_of_lines[i].split(' ')
+            
+            # change the color
+            color[1] = '#64ff64'
+            
+            # remove the current color
+            list_of_lines[i] = list_of_lines[i][:-7]
+            
+            # add the new color
+            list_of_lines[i] = f'{list_of_lines[i]}{color[1]}'
 
 # write the new color to the file
-# with open('button_state.txt', 'w') as f:
-    # f.write(' '.join(color))
-  
-def test1():
-    with open('button_state.txt', 'r') as f:
-        for line in f.readlines():
-            if 'button_notes' in line:
-                print(line)
-                current_Color = line.split(' ')[1]
-                new_Color = '#64ff64'
-
-    with open('button_state.txt', 'w') as f:
-        f.write()
-
-text = '#64ff64'
-text = text[:-7]
-print(text)
+with open('button_state.txt', 'w') as f:
+    f.writelines(list_of_lines)
+            
+            

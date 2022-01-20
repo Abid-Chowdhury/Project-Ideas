@@ -1,2 +1,2 @@
-button_to_do_list #ffffff
-button_notes #ffffff
+button_to_do_list #dedede
+button_notes #dedede
