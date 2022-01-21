@@ -1,0 +1,15 @@
+button_to_do_list #ffff64
+button_notes #dedede
+button_calender #dedede
+button_chat_system #dedede
+button_weather #dedede
+button_portfolio_website #dedede
+button_netflix_clone #dedede
+button_chess_game #dedede
+button_donation_website #dedede
+button_budget_tracker #dedede
+button_tic_tac_toe #dedede
+button_form_validator #dedede
+button_web_scraper #dedede
+button_stock_trading_bot #dedede
+button_discord_bot #dedede
