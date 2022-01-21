@@ -63,20 +63,21 @@ class MainWindow(QMainWindow):
                 
                 # read through all the lines
                 for i in range(0,len(list_of_lines)):
-                    
+                    # repeat for each button
+                    for button in buttons:
                     # find the line to change
-                    if 'button_donation_website' in list_of_lines[i]:
-                        # locate the color
-                        color = list_of_lines[i].split(' ')
-                        
-                        # change the color 
-                        color[1] = f'{self.ui.button_donation_website.palette().window().color().name()}\n'
-                        
-                        # remove the current color
-                        list_of_lines[i] = list_of_lines[i][:-8]
-                        
-                        # add the new color
-                        list_of_lines[i] = f'{list_of_lines[i]}{color[1]}'
+                        if button.objectName() in list_of_lines[i]:
+                            # locate the color
+                            color = list_of_lines[i].split(' ')
+
+                            # change the color 
+                            color[1] = f'{button.palette().window().color().name()}\n'
+
+                            # remove the current color
+                            list_of_lines[i] = list_of_lines[i][:-8]
+
+                            # add the new color
+                            list_of_lines[i] = f'{list_of_lines[i]}{color[1]}'
             
             # write the new colors to the file
             with open('colors.txt', 'w') as f:
